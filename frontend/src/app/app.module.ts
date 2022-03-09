@@ -24,5 +24,5 @@ import {HttpClientModule} from "@angular/common/http";
   providers: [],
   bootstrap: [AppComponent]
 })
-// @ts-ignore
-export class AppModule { }// @ts-ignore
+
+export class AppModule { }
