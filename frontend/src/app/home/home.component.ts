@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import {Product} from "../model/product.model";
+import {Products} from "../model/products.model";
 import {MasterService} from "../service/master.service";
-
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
+  list!: Products[]
 
-  list!: Product[]
 
   constructor(private mast: MasterService) { }
 
@@ -24,5 +24,4 @@ export class HomeComponent implements OnInit {
       }
     })
   }
-
 }
