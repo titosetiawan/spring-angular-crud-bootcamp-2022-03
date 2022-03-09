@@ -62,10 +62,14 @@ export class InsertComponent implements OnInit {
       }
       this.mast.insert(product).subscribe({
         next: hasil => {
-          alert('simpan berhasil')
+          alert("simpan berhasil")
         },
         error: err => {
-          console.log(err)
+          const pesan: any[] = err.error.status;
+          let msg = '';
+          for (let i = 0; i < pesan.length; i++) {
+            msg += pesan[i].field + " : " + pesan[i].defaultMessage + "\n";
+          }
         }
       });
     } else {

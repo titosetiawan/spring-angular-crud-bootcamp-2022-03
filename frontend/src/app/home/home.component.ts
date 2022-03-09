@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private mast: MasterService) { }
 
   ngOnInit(): void {
+    console.log(this.list)
     this.mast.list().subscribe( {
       next: hasil => {
         this.list = hasil;

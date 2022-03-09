@@ -1,9 +1,8 @@
 <div class="card">
   <div class="card-header">
-    Featured
+    <h5 class="card-title">INSERT</h5>
   </div>
   <div class="card-body">
-    <h5 class="card-title">INSERT</h5>
     <p class="card-text">Ini Halaman Insert</p>
   </div>
 
@@ -13,73 +12,31 @@
         <label for="id">ID</label>
         <input type="text" class="form-control" id="id" aria-describedby="emailHelp"
                placeholder="Enter PRODUCT ID" formControlName="id">
-        <span *ngIf="!formAdd.get('id')?.valid && formAdd.get('id')?.touched"
-              class="error-block">
-        <span *ngIf="!formAdd.get('id')?.errors?.['minlength']"
-              class="error-block">
-              Panjang Minimal 1
-        </span>
-          </span>
       </div>
       <div class="form-group">
         <label for="name">NAME</label>
         <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
                placeholder="Enter NAME" formControlName="department_id">
-        <span *ngIf="!formAdd.get('name')?.valid && formAdd.get('name')?.touched"
-              class="error-block">
-          <span *ngIf="!formAdd.get('department_id')?.errors?.['minlength']"
-                class="error-block">
-                Panjang Minimal 1
-          </span>
-        </span>
       </div>
       <div class="form-group">
         <label for="price">PRICE</label>
         <input type="text" class="form-control" id="price" aria-describedby="emailHelp"
                placeholder="Enter PRICE" formControlName="price">
-        <span *ngIf="!formAdd.get('price')?.valid && formAdd.get('name')?.touched"
-              class="error-block">
-          <span *ngIf="!formAdd.get('price')?.errors?.['minlength']"
-                class="error-block">
-                Panjang Minimal 1
-          </span>
-        </span>
       </div>
       <div class="form-group">
-        <label for="name">CATEGORY</label>
+        <label for="category">CATEGORY</label>
         <input type="text" class="form-control" id="category" aria-describedby="emailHelp"
                placeholder="Enter CATEGORY" formControlName="category">
-        <span *ngIf="!formAdd.get('category')?.valid && formAdd.get('category')?.touched"
-              class="error-block">
-          <span *ngIf="!formAdd.get('category')?.errors?.['minlength']"
-                class="error-block">
-                Panjang Minimal 1
-          </span>
-        </span>
       </div>
       <div class="form-group">
         <label for="create_date">CREATE DATE</label>
         <input type="text" class="form-control" id="create_date" aria-describedby="emailHelp"
                placeholder="Enter CREATE DATE" formControlName="create_date">
-        <span *ngIf="!formAdd.get('create_date')?.valid && formAdd.get('create_date')?.touched"
-              class="error-block">
-          <span *ngIf="!formAdd.get('create_date')?.errors?.['minlength']"
-                class="error-block">
-                Panjang Minimal 1
-          </span>
-        </span>
       </div>
       <div class="form-group">
         <label for="create_by">CREATE BY</label>
         <input type="text" class="form-control" id="create_by" aria-describedby="emailHelp"
                placeholder="Enter CREATE BY" formControlName="create_by">
-        <span *ngIf="!formAdd.get('create_by')?.valid && formAdd.get('create_by')?.touched"
-              class="error-block">
-          <span *ngIf="!formAdd.get('create_by')?.errors?.['minlength']"
-                class="error-block">
-                Panjang Minimal 1
-          </span>
-        </span>
       </div>
 
       <div class="form-check">
