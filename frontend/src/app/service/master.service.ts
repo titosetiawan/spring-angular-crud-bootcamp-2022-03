@@ -11,7 +11,7 @@ export class MasterService {
   constructor(private http: HttpClient) { }
 
   list(): Observable<any>{
-    return this.http.get(environment.baseUrl+'/home').pipe(map(data => data))
+    return this.http.get(environment.baseUrl+'/list').pipe(map(data => data))
   }
   insert(data: Products): Observable<any>{
     let url = '/insert';
