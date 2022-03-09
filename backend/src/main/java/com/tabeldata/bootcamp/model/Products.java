@@ -4,7 +4,7 @@ import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotEmpty;
-import java.time.LocalDate;
+import java.sql.Date;
 
 @Data
 public class Products {
@@ -16,7 +16,7 @@ public class Products {
 
     private String category;
 
-    private LocalDate create_date;
+    private Date create_date;
     private String create_by;
 
 

@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
@@ -42,14 +43,14 @@ public class ProductsControllers {
             @RequestParam(name = "name") String name,
             @RequestParam(name = "price") Integer price,
             @RequestParam(name = "category") String category,
-            @RequestParam(name = "create_date") LocalDate create_date,
+            @RequestParam(name = "create_date") Date create_date,
             @RequestParam(name = "create_by") String create_by) {
         Products data = new Products();
         data.setId(id);
         data.setName(name);
         data.setPrice(price);
         data.setCategory(category);
-        data.setCreate_date(create_date);
+        data.setCreate_date(Date.valueOf(LocalDate.now()));
         data.setCreate_by(create_by);
         return data;
     }

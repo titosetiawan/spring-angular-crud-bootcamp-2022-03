@@ -9,9 +9,11 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Repository
@@ -71,9 +73,10 @@ public class ProductsDao {
             data.setName(rs.getString("name"));
             data.setPrice(rs.getInt("price"));
             data.setCategory(rs.getString("category"));
-            Date createDate = rs.getDate("create_date");
-            data.setCreate_date(createDate.toLocalDate());
             data.setCreate_by(rs.getString("create_by"));
+            Date createDate = rs.getDate("create_date");
+            if (createDate != null)
+            data.setCreate_date(Date.valueOf(LocalDate.now()));
             return data;
         }
     }
