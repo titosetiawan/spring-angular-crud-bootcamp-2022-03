@@ -1,9 +1,6 @@
 package com.tabeldata.bootcamp.model;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
-
-import javax.validation.constraints.NotEmpty;
 import java.sql.Date;
 
 @Data

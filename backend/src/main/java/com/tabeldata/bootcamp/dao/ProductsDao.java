@@ -9,7 +9,6 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Date;
@@ -48,7 +47,7 @@ public class ProductsDao {
     }
 
     public void update(Products data) {
-        String sql = "update category set name = :name, description = :description where category_id = :kodeid";
+        String sql = "update category set name = :name, price = :price, category = :category, create_by = :create_by where category_id = :kodeid";
         MapSqlParameterSource map = new MapSqlParameterSource();
         map.addValue("name", data.getName());
         map.addValue("price", data.getPrice());
