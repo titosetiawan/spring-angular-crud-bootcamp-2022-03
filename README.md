@@ -20,7 +20,8 @@ Buatlah aplikasi CRUD sederhana menggunakan
 host: 192.168.100.250
 port: 5432
 user: bootcamp
-password: bootcamp202203 
+password: bootcamp202203
+db-name: bootcamp
 ```
 
 - Buatlah Rest Api berdasarkan Crud tersebut
