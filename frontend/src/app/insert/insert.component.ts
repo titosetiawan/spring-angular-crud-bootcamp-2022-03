@@ -18,12 +18,12 @@ export class InsertComponent implements OnInit {
               private router: Router,
               private route: ActivatedRoute) {
     this.formAdd = this.formBuild.group({
-      'id': new FormControl(null, [Validators.required, Validators.minLength(1)]),
-      'name': new FormControl(null, [Validators.required, Validators.minLength(1)]),
-      'price': new FormControl(null, [Validators.required, Validators.minLength(3)]),
-      'category': new FormControl(null, [Validators.required, Validators.minLength(3)]),
-      'create_date': new FormControl(null, [Validators.required, Validators.minLength(3)]),
-      'create_by': new FormControl(null, [Validators.required, Validators.minLength(3)])
+      'id': [null],
+      'name': [null],
+      'price': [null],
+      'category': [null],
+      'create_date': [null],
+      'create_by': [null]
     })
   }
 
